@@ -96,6 +96,7 @@ async function init() {
    return logger.success(constants.ready(active.length, guildCount));
 }
 
-       
+       client.on('message', msg => {   if (msg.content === '$ping') {     msg.reply('pong');   } });
+
        
 init();
